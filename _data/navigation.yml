@@ -3,6 +3,11 @@ main:
   - title: "Quick-Start Guide"
     url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   - title: "About"
+    url: /about/
+  - title: "Contact"
+    url: /contact/
+  - title: "Home"
+    url: /
   - title: "System Level Design"
   - title: "Detailed Design"
   - title: "Setup"
