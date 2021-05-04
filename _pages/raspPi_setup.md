@@ -47,7 +47,7 @@ This includes rviz (a data visualization tool) which will come in handy for test
 Proceed to [ROS Tutorials](http://wiki.ros.org/ROS/Tutorials) to setup a catkin_ws - the location of where all the ROS packages and source code. Complete the first tutorial: [Installing and Configuring Your ROS Environment](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment). I also recommend spending time with the Beginning Level tutorials located on the [ROS Tutorials](http://wiki.ros.org/ROS/Tutorials) page to become accustom to ROS. It is a steep learning curve, but will eventually make one's life easier.
 
 # Rasp Pi -> Motor Controller (UART)
-The Rasp Pi 4 has six UART (RX/TX) ports to choose from ([raspberrypi.org info](https://www.raspberrypi.org/documentation/configuration/uart.md)). For our purposes, I chose UART2 which is not natively activited. We can activate UART2 by doing the following:
+The Rasp Pi 4 has six UART (RX/TX) busses to choose from ([raspberrypi.org info](https://www.raspberrypi.org/documentation/configuration/uart.md)). For our purposes, I chose UART2 which is not natively activited. We can activate UART2 by doing the following:
 `sudo vi /boot/firmware/usercfg.txt` \
 And add: `dtoverlay=UART2,<specify baudrate>` \
 Then reboot. \
@@ -56,15 +56,25 @@ Then reboot. \
 To make sure the new UART port is open: `python3 -m serial.tools.list_ports`, you should see an additional tty/AMA0 (I think)
 
 # Rasp Pi -> Wheel Encoders (SPI)
-Serial Peripheral Interface (SPI) is not natively actived on the Rasp Pi 4, which has up to 6 SPI ports. For our purposes, I chose SPI0. To activate SPI do the following:
+Serial Peripheral Interface (SPI) is not natively actived on the Rasp Pi 4, which has up to 6 SPI busses. For our purposes, I chose SPI0. To activate SPI do the following:
 `sudo vi /boot/firmware/usercfg.txt` \
-And add: `dtparam=spi=on`
-Also: `pip3 install spidev`
-Then reboot.
-Check `ls -l /dev/spidev*`. You should see two lines with SPI.
+And add: `dtparam=spi=on` \
+Close the file and in the command line: `pip3 install spidev` \
+Then reboot. \
+This automatically addes two chip select lines (by default you can run two devices on this SPI line). Next, check that your user has permissions to access the the SPI buss: `ls -l /dev/spi*`
 ![image-center](https://hannabanana96.github.io/MPDR_Project/assets/images/spi_cmdline.JPG){: .align-center}
 
 
-This automatically addes two chip select lines (by default you can run two devices on this SPI line). Next, check that your user has permissions to access the the SPI ports: `ls -l /dev/spi*` Need to finish this, add a picture
+# Permission denied for GPIO/I2C/SPI access?
+This means that these busses currently require "sudo" access to run. Here is how to fix this by making a change to the udev-system to change ownership of the SPI/I2C/GPIO busses.
 
+1. Check to see if you have access to the port
+`ls -l /dev/spi*`
+![image-center](https://hannabanana96.github.io/MPDR_Project/assets/images/spi_cmdline.JPG){: .align-center}
+If the third column says "root" (unlike the picture), you the user do not have access to the port and should continue to follow these steps. 
+2. Look to see if there is already a "spi" group present on the Pi: `$ groups`. If there is not, create one: `sudo groupadd spi`
+3. Add your user to the group: `sudo adduser "$USER" spi`
+4. Create a rules file: `sudo vi /etc/udev/rules.d/50-spi.rules` with the following contents:
+`KERNEL=="spidev*", GROUP="spi", MODE="0660"`
+5. Reboot and `ls -l /dev/spi*` to check that the "spi" group now owns the activated SPI busses
 
