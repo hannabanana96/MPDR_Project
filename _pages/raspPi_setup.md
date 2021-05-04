@@ -1,6 +1,13 @@
 ---
 permalink: /raspPi_setup/
 title: Raspberry Pi Setup
+tags:
+  - alignment
+  - captions
+  - content
+  - css
+  - image
+  - markup
 ---
 # Setup Raspberry Pi 4 with Ubuntu Mate
 As far as I found, Ubuntu Mate 20.04 LTS is the current "best" distribution for running ROS Noetic on a Raspberry Pi 4. \
@@ -55,7 +62,8 @@ And add: `dtparam=spi=on`
 Also: `pip3 install spidev`
 Then reboot.
 Check `ls -l /dev/spidev*`. You should see two lines with SPI.
-<img src="{{ site.url }}{{ site.baseurl }}/assets/images/spi_cmdline.jpg" alt="">
+![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/spi_cmdline.jpg){: .align-center}
+
 
 This automatically addes two chip select lines (by default you can run two devices on this SPI line). Next, check that your user has permissions to access the the SPI ports: `ls -l /dev/spi*` Need to finish this, add a picture
 
