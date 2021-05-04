@@ -6,7 +6,7 @@ main:
   - title: "System Level Design"
   - title: "Detailed Design"
   - title: "Hardware Setup"
-    url: /hardware_setup/
+    url: /raspPi_setup/
   - title: "ROS Packages"
   - title: "Solidworks"
   - title: "Wiring Diagrams"
