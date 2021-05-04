@@ -1,5 +1,6 @@
 ---
 permalink: /raspPi_setup/
+title: Raspberry Pi Setup
 ---
 # Setup Raspberry Pi 4 with Ubuntu Mate
 As far as I found, Ubuntu Mate 20.04 LTS is the current "best" distribution for running ROS Noetic on a Raspberry Pi 4. \
@@ -20,10 +21,10 @@ Other things I suggest installing before moving forward with ROS:
 `sudo apt install vim`
 Here are my recommended vim settings:
 ```
-set number        " Turns on row numbers
-set tabstop=4     " Tab = 4 spaces
-set shiftwidth=4  " Shift = 4 spaces
-set expandtab     " Tabs turn into spaces (good for python programming
+set number          " Turns on row numbers
+set tabstop=4       " Tab = 4 spaces
+set shiftwidth=4    " Shift = 4 spaces
+set expandtab       " Tabs turn into spaces (good for python programming
 set autoindent    
 set smartindent
 colorscheme koehler " I just like this color scheme
@@ -37,3 +38,22 @@ Follow the instructions in the link. When selecting which installation to chose,
 This includes rviz (a data visualization tool) which will come in handy for testing and debugging.
 
 Proceed to [ROS Tutorials](http://wiki.ros.org/ROS/Tutorials) to setup a catkin_ws - the location of where all the ROS packages and source code. Complete the first tutorial: [Installing and Configuring Your ROS Environment](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment). I also recommend spending time with the Beginning Level tutorials located on the [ROS Tutorials](http://wiki.ros.org/ROS/Tutorials) page to become accustom to ROS. It is a steep learning curve, but will eventually make one's life easier.
+
+# Rasp Pi -> Motor Controller (UART)
+The Rasp Pi 4 has six UART (RX/TX) ports to choose from ([raspberrypi.org info](https://www.raspberrypi.org/documentation/configuration/uart.md)). For our purposes, I chose UART2 which is not natively activited. We can activate UART2 by doing the following:
+`sudo vi /boot/firmware/usercfg.txt` \
+And add: `dtoverlay=UART2,<specify baudrate>` \
+Then reboot. \
+*The baudrate is going to dependent on what you specify in your code and on the motor controller hardware via the dipswitches ([see motor controller datasheet](https://github.com/hannabanana96/MRPD_Masters/blob/main/smartdriveduo-smart-dual-channel-30a-motor-driver-datasheet.pdf))
+
+To make sure the new UART port is open: `python3 -m serial.tools.list_ports`, you should see an additional tty/AMA0 (I think)
+
+# Rasp Pi -> Wheel Encoders (SPI)
+Serial Peripheral Interface (SPI) is not natively actived on the Rasp Pi 4, which has up to 6 SPI ports. For our purposes, I chose SPI0. To activate SPI do the following:
+`sudo vi /boot/firmware/usercfg.txt` \
+And add: `dtparam=spi=on`
+Then reboot.
+
+This automatically addes two chip select lines (by default you can run two devices on this SPI line). Next, check that your user has permissions to access the the SPI ports: `ls -l /dev/spi*` Need to finish this, add a picture
+
+
