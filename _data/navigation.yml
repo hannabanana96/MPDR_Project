@@ -3,10 +3,10 @@ main:
   - title: "About"
     url: /about/
   - title: "Contact"
-    url: /contact/
   - title: "System Level Design"
   - title: "Detailed Design"
-  - title: "Setup"
+  - title: "Hardware Setup"
+    url: /hardware_setup/
   - title: "ROS Packages"
   - title: "Solidworks"
   - title: "Wiring Diagrams"
