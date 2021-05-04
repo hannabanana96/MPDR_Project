@@ -15,6 +15,6 @@ In the ~/.bashrc file of the ONBOARD_Pi, add the following:
 export ROS_IP=<public IP of the ONBOARD_Pi>
 export ROS_MASTER_URI=http://<public IP of MASTER_Pi>:11311
 ```
-This indicates to ROS that the MASTER_Pi is the master. 
-Launch a ROS score on the master (MASTER_PI) and make sure the ONBOARD_Pi can see the topics (`rostopic list`)
+This indicates to ROS that the MASTER_Pi is the master. \
+Launch a ROS score on the master (`roscore`) and make sure the ONBOARD_Pi can see the topics (`rostopic list`)
 
