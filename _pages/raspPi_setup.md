@@ -62,7 +62,7 @@ And add: `dtparam=spi=on`
 Also: `pip3 install spidev`
 Then reboot.
 Check `ls -l /dev/spidev*`. You should see two lines with SPI.
-![image-center]({{ site.url }}{{ site.baseurl }}/assets/images/spi_cmdline.JPG){: .align-center}
+![image-center](https://hannabanana96.github.io/MPDR_Project/assets/images/spi_cmdline.JPG){: .align-center}
 
 
 This automatically addes two chip select lines (by default you can run two devices on this SPI line). Next, check that your user has permissions to access the the SPI ports: `ls -l /dev/spi*` Need to finish this, add a picture
