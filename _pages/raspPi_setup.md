@@ -31,7 +31,7 @@ colorscheme koehler " I just like this color scheme
 syntax on           " Turns on syntax highlighting
 ```
 
-* [Setup SSH capabilities](https://www.raspberrypi.org/documentation/remote-access/ssh/) - I recommend the systemctl method (Ubuntu Mate 20.04 doesn't have raspi-config).
+* [Setup SSH capabilities](https://www.raspberrypi.org/documentation/remote-access/ssh/) - I recommend the systemctl method (Ubuntu Mate 20.04 doesn't have raspi-config). Setting up ssh will allow you to access the Rasp Pi's file system and command line from another machine.
 
 # Install [ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu) on the Raspberry Pi 4
 Follow the instructions in the link. When selecting which installation to chose, I suggest the Desktop Install: `sudo apt install ros-noetic-desktop`
@@ -52,7 +52,11 @@ To make sure the new UART port is open: `python3 -m serial.tools.list_ports`, yo
 Serial Peripheral Interface (SPI) is not natively actived on the Rasp Pi 4, which has up to 6 SPI ports. For our purposes, I chose SPI0. To activate SPI do the following:
 `sudo vi /boot/firmware/usercfg.txt` \
 And add: `dtparam=spi=on`
+Also: `pip3 install spidev`
 Then reboot.
+Check `ls -l /dev/spidev*`. You should see two lines with SPI.
+{% include figure image_path="/assets/images/spi_cmdline.jpg" alt="this is a placeholder image" caption="This is a figure caption." %}
+
 
 This automatically addes two chip select lines (by default you can run two devices on this SPI line). Next, check that your user has permissions to access the the SPI ports: `ls -l /dev/spi*` Need to finish this, add a picture
 
