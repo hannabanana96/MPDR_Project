@@ -1,7 +1,7 @@
 ---
-permalink: /hardware_setup/
+permalink: /raspPi_setup/
 ---
-# Setup Raspberry Pi 4 with Ubuntu Mate and ROS Noetic
+# Setup Raspberry Pi 4 with Ubuntu Mate
 As far as I found, Ubuntu Mate 20.04 LTS is the current "best" distribution for running ROS Noetic on a Raspberry Pi 4. \
 *LTS: Long Term Support
 
@@ -30,4 +30,10 @@ colorscheme koehler " I just like this color scheme
 syntax on           " Turns on syntax highlighting
 ```
 
-* [Setup SSH capabilities](https://www.raspberrypi.org/documentation/remote-access/ssh/)
+* [Setup SSH capabilities](https://www.raspberrypi.org/documentation/remote-access/ssh/) - I recommend the systemctl method (Ubuntu Mate 20.04 doesn't have raspi-config).
+
+# Install [ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu) on the Raspberry Pi 4
+Follow the instructions in the link. When selecting which installation to chose, I suggest the Desktop Install: `sudo apt install ros-noetic-desktop`
+This includes rviz (a data visualization tool) which will come in handy for testing and debugging.
+
+Proceed to [ROS Tutorials](http://wiki.ros.org/ROS/Tutorials) to setup a catkin_ws - the location of where all the ROS packages and source code. Complete the first tutorial: [Installing and Configuring Your ROS Environment](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment). I also recommend spending time with the Beginning Level tutorials located on the [ROS Tutorials](http://wiki.ros.org/ROS/Tutorials) page to become accustom to ROS. It is a steep learning curve, but will eventually make one's life easier.
