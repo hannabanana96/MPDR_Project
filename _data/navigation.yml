@@ -2,17 +2,10 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Contact"
-  - title: "System Level Design"
-  - title: "Detailed Design"
   - title: "RaspPi Setup"
     url: /raspPi_setup/
-  - title: "ROS Packages"
-  - title: "Solidworks"
-  - title: "Wiring Diagrams"
-  - title: "Demo Videos"
-  - title: "Fugure Improvements"
-  - title: "Project Limitations"
+  - title: "ROS Setup"
+    url: /ros_setup
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
