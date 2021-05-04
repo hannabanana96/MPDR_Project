@@ -1,5 +1,5 @@
 ---
-permalink: /ros_setup
+permalink: /ros_setup/
 title: ROS Setup Guide
 ---
 
