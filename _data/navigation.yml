@@ -5,7 +5,9 @@ main:
   - title: "RaspPi Setup"
     url: /raspPi_setup/
   - title: "ROS Setup"
-    url: /ros_setup
+    url: /ros_setup/
+  - title: "Current Testing"
+    url: /current_testing/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
