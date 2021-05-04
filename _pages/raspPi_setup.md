@@ -53,7 +53,7 @@ And add: `dtoverlay=UART2,<specify baudrate>` \
 Then reboot. \
 *The baudrate is going to dependent on what you specify in your code and on the motor controller hardware via the dipswitches ([see motor controller datasheet](https://github.com/hannabanana96/MRPD_Masters/blob/main/smartdriveduo-smart-dual-channel-30a-motor-driver-datasheet.pdf))
 
-To make sure the new UART port is open: `python3 -m serial.tools.list_ports`, you should see an additional tty/AMA0 (I think)
+To make sure the new UART port is open: `python3 -m serial.tools.list_ports`, you should see `tty/AMA1`
 
 # Rasp Pi -> Wheel Encoders (SPI)
 Serial Peripheral Interface (SPI) is not natively actived on the Rasp Pi 4, which has up to 6 SPI busses. For our purposes, I chose SPI0. To activate SPI do the following:
