@@ -5,7 +5,7 @@ main:
   - title: "Contact"
   - title: "System Level Design"
   - title: "Detailed Design"
-  - title: "Hardware Setup"
+  - title: "RaspPi Setup"
     url: /raspPi_setup/
   - title: "ROS Packages"
   - title: "Solidworks"
