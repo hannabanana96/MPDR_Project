@@ -95,7 +95,7 @@ analytics:
 # Site Author
 author:
   name             : "Hanna Anderson"
-  avatar           : "/assets/images/profile_pic.jpg"
+  avatar           : "/assets/images/profile_pic_small.jpg"
   bio              : "Graduate Student in Electrical and Computer Engineering at Oregon State University"
   location         : "Corvallis, Oregon"
   email            : "hanna.sue.anderson@gmail.com"
