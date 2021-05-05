@@ -9,7 +9,8 @@ title: Solidworks
 ([Solidworks SLDPRT](https://github.com/hannabanana96/MRPD_Masters/blob/main/acrylicMounts/acrylicMount_3.SLDPRT))
 
 
-![Middle Acrylic](https://github.com/hannabanana96/MRPD_Masters/blob/main/acrylicMounts/middleAcrylicMount.JPG){: .align-center}
+
+![Middle Acrylic]({{ site.url }}/{{ base.url }}/assets/images/middleAcrylicMount.JPG){: .align-center}
 ![Back Acrylic](https://github.com/hannabanana96/MRPD_Masters/blob/main/acrylicMounts/backAcrylicMount.JPG){: .align-center}
 
 
