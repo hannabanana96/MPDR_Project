@@ -18,3 +18,30 @@ export ROS_MASTER_URI=http://<public IP of MASTER_Pi>:11311
 This indicates to ROS that the MASTER_Pi is the master. \
 Launch a ROS score on the master (`roscore`) and make sure the ONBOARD_Pi can see the topics (`rostopic list`)
 
+# Install & Setup of Sensor Packages
+## GPS - NEO-M9N
+ROS Package: <https://github.com/KumarRobotics/ublox>
+`git clone https://github.com/KumarRobotics/ublox.git` \
+Communication protocol with Rasp Pi: UART via ttyS0\
+Power: 3.3V or 5V
+
+On the Raspberry Pi, UART needs to be enabled:
+`sudo vi /boot/firmware/usercfg.txt` \
+Add/change `enable_uart=1` \
+Reboot to activate
+
+** Write down how to check that this was enabled **
+
+Also might need to set the baud rate for ttyS0 to 38400
+> `stty -F /dev/ttyS0 38400`
+
+GPS Wiring Guide:
+GPS_5V - pi_5V \
+      or \
+GPS_3V3 - pi_3V3
+GPS_GND - pi_GND
+GPS_RX - pi_TX (GPIO_14)
+GPS_TX - pi_RX (GPIO_15)
+
+| Type of Stressor | Example | Impact/Outcome |
+| :--------------- | ------- | -------------: |
