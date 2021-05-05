@@ -8,6 +8,8 @@ main:
     url: /ros_setup/
   - title: "Current Testing"
     url: /current_testing/
+  - title: "Solidworks"
+    url: /solidworks/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
