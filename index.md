@@ -4,13 +4,12 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/mm-home-page-feature.jpg
+  overlay_image: /assets/images/robo_2.jpg
   actions:
     - label: "<i class='fas fa-download'></i> Link to Github Code"
       url: "https://github.com/hannabanana96/MRPD_Masters/"
 excerpt: >
-  A flexible two-column Jekyll theme. Perfect for building personal sites, blogs, and portfolios.<br />
-  <small><a href="https://github.com/mmistakes/minimal-mistakes/releases/tag/4.23.0">Latest release v4.23.0</a></small>
+  Documentation and system overview for current and future groups members. <br />
 feature_row:
   - image_path: /assets/images/mm-customizable-feature.png
     alt: "customizable"
