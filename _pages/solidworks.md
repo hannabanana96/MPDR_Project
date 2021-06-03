@@ -3,7 +3,7 @@ permalink: /solidworks/
 title: Solidworks
 ---
 # Acrylic Mounts
-* [Middle Acrylic Mount STL file](https://github.com/hannabanana96/MRPD_Masters/blob/main/acrylicMounts/middleAcrylicMount.STL)
+* [Middle Acrylic Mount STL file](https://github.com/hannabanana96/MPDR_Masters/blob/master/acrylicMounts/middleAcrylicMount.STL)
 ([Solidworks SLDPRT](https://github.com/hannabanana96/MRPD_Masters/blob/main/acrylicMounts/acrylicMount_1.SLDPRT))
 * [Back Acrylic Mount STL file ](https://github.com/hannabanana96/MRPD_Masters/blob/main/acrylicMounts/backAcrylicMount.STL)
 ([Solidworks SLDPRT](https://github.com/hannabanana96/MRPD_Masters/blob/main/acrylicMounts/acrylicMount_3.SLDPRT))
