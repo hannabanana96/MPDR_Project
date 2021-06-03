@@ -9,7 +9,7 @@ title: Solidworks
 ([Solidworks SLDPRT](https://github.com/hannabanana96/MRPD_Masters/blob/main/acrylicMounts/acrylicMount_3.SLDPRT))
 
 ![Middle Acrylic](https://hannabanana96.github.io/MPDR_Project/assets/images/middleAcrylicMount.JPG){: .align-center}
-![Back Acrylic](https://hannabanana96.github.io/MPDR_Project/assets/images/BackAcrylicMount.JPG){: .align-center}
+![Back Acrylic](https://hannabanana96.github.io/MPDR_Project/assets/images/backAcrylicMount.JPG){: .align-center}
 
 # Lidar Mounts
 * [Lidar Base STL file](https://github.com/hannabanana96/MRPD_Masters/blob/main/lidarMounts/lidarBase.STL)
