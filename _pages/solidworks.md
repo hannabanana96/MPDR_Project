@@ -41,5 +41,5 @@ title: Solidworks
 
 # Acrylic Mounting Plate
 * [File for SLDPRT originals and DXFs for laser cutting](https://github.com/hannabanana96/MPDR_Masters/tree/master/docs/solidwork/lasercutMountingPlate)
-* 
+
 ![Lasercut Mounting Plate](https://hannabanana96.github.io/MPDR_Project/assets/images/lasercut_img.JPG){: .align-center}
