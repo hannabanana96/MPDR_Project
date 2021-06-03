@@ -14,3 +14,13 @@ Files to be launched by each Pi:
 
 MASTER_Pi: Webpage and testing interface
 ONBOARD_Pi: Robot sensors and movement
+
+
+
+
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
+
+
