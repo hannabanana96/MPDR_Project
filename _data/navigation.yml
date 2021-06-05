@@ -6,6 +6,8 @@ main:
     url: /raspPi_setup/
   - title: "ROS Setup"
     url: /ros_setup/
+  - title: "Wheel Encoders"
+    url: /wheelEncoder/
   - title: "Current Testing"
     url: /current_testing/
   - title: "Solidworks"
