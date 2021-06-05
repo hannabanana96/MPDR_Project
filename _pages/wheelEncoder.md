@@ -3,7 +3,7 @@ permalink: /wheelEncoder/
 ---
 
 # Wheel Encoders
-The robot determines where it is in relation to a coordinate frame by using it's wheel encoders. 
+The robot determines where it is in relation to a coordinate frame by using it's wheel encoders. Current implementation uses a custom package with custom code, located in the [mpdr](https://github.com/hannabanana96/MPDR_Masters/tree/master/mpdr) package, in [encoder.py](https://github.com/hannabanana96/MPDR_Masters/blob/master/mpdr/src/encoders.py)
 
 # Implementation Overview
 This implementation uses "tick" values from the wheel encoder. Tick values relate to the angle at which the wheel encoder is compared to the location of the magnet (seen on the gear). As the gear rotates (as the wheel rotates and the robot moves), the ticks values reported by the wheel encoder will either increase or decrease. The increase or descrease of tick value relates to the increase or decrease of position of the robot. Consequently, the rate at which the ticks values increase or decrease relates to the velocity of the wheel. The individual velocities of the wheel need to be put in terms of the robot as a linear and angular velocity. 
