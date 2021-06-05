@@ -4,11 +4,11 @@ permalink: /gps/
 
 The GPS sensor is used for live tracking of the robot's location, and eventually would help with global positioning. 
 
-# Setup
-The GPS used for this project is the [NEO-M9N, SMA](https://www.u-blox.com/en/product/neo-m9n-module) via [Sparkfun breakout board](https://www.sparkfun.com/products/17285). This is accompanied by a [GNSS Multi-Band Magnetic Mount Antenna](https://www.sparkfun.com/products/15192). 
+
+
 
 ## Hardware Setup
-This GPS sensor has several different communication busses (UART & I2C). UART was chosen to match a pre-made ROS package. The GPS can be powered either by either 3V3 or 5V. 
+The GPS used for this project is the [NEO-M9N, SMA](https://www.u-blox.com/en/product/neo-m9n-module) via [Sparkfun breakout board](https://www.sparkfun.com/products/17285). This is accompanied by a [GNSS Multi-Band Magnetic Mount Antenna](https://www.sparkfun.com/products/15192). This GPS sensor has several different communication busses (UART & I2C). UART was chosen to match a pre-made ROS package. The GPS can be powered either by either 3V3 or 5V. 
 
 To enable the UART pins on the Pi:
 * `sudo vi /boot/firmware/usercfg.txt`
