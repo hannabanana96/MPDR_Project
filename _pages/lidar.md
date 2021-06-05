@@ -4,7 +4,7 @@ permalink: /lidar/
 
 The lidar is used for localization, mapping, and nearby obstacle detection (obstacles that the robot needs to navigate around).
 
-# Setup
+# Hardware and Software Setup
 The lidar used in this project is the [Slamtec RPlidar S1](https://www.slamtec.com/en/Lidar/S1), chosen for its outdoor capabilities. The lidar is connected to the Pi via two USB ports (power and data). Pre-made ROS packages are used:
   * ROS package: [rplidar_ros](https://github.com/Slamtec/rplidar_ros)
   * ROS Wiki: [rplidar](http://wiki.ros.org/rplidar)
