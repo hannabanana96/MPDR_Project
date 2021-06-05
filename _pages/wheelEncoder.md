@@ -49,7 +49,7 @@ Then reboot. \
 This automatically addes two chip select lines (by default you can run two devices on this SPI line). Next, check that your user has permissions to access the the SPI buss: `ls -l /dev/spi*`
 ![image-center](https://hannabanana96.github.io/MPDR_Project/assets/images/spi_cmdline.JPG){: .align-center}
 
-# Run with ROS
+# Software Setup
 Assuming the Pi has ROS and the [project code](https://github.com/hannabanana96/MPDR_Masters) installed already, the wheel encoder code can be launched by the following:
 * Start a ROS core: `roscore`
 * In another window: `rosrun mpdr encoder.py` \
