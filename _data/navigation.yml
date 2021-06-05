@@ -6,6 +6,8 @@ main:
     url: /raspPi_setup/
   - title: "ROS Setup"
     url: /ros_setup/
+  - title: "lidar"
+    url: /lidar/
   - title: "Wheel Encoders"
     url: /wheelEncoder/
   - title: "Current Testing"
