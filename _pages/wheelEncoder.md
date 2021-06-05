@@ -2,7 +2,6 @@
 permalink: /wheelEncoder/
 ---
 
-# Wheel Encoders
 The robot determines where it is in relation to a coordinate frame by using it's wheel encoders. Current implementation uses a custom package with custom code, located in the [mpdr](https://github.com/hannabanana96/MPDR_Masters/tree/master/mpdr) package, in [encoder.py](https://github.com/hannabanana96/MPDR_Masters/blob/master/mpdr/src/encoders.py)
 
 # Implementation Overview
