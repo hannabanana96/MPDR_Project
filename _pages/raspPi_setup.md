@@ -1,13 +1,6 @@
 ---
 permalink: /raspPi_setup/
 title: Raspberry Pi Setup
-tags:
-  - alignment
-  - captions
-  - content
-  - css
-  - image
-  - markup
 ---
 # Setup Raspberry Pi 4 with Ubuntu Mate
 As far as I found, Ubuntu Mate 20.04 LTS is the current "best" distribution for running ROS Noetic on a Raspberry Pi 4. \
