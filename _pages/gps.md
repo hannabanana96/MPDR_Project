@@ -1,5 +1,6 @@
 ---
 permalink: /gps/
+title: GPS Sensor
 ---
 
 # Overview
