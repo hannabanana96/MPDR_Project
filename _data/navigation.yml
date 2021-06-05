@@ -6,6 +6,8 @@ main:
     url: /raspPi_setup/
   - title: "ROS Setup"
     url: /ros_setup/
+  - title: "IMU"
+    url: /imu/
   - title: "GPS"
     url: /gps/
   - title: "Lidar"
