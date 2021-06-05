@@ -57,6 +57,7 @@ Assuming the Pi has ROS and the [project code](https://github.com/hannabanana96/
 *This runs just the wheel encoders code, nothing else
 
 # Sources of Error
-The are many sources of error with this as wheel encoders can produce false reports when there is wheel slippage. The implementation senses the position of the wheel at the base of the motor on the gearbox instead of the actual wheel. This means that there are several revoluations of the gear per one revolution of the wheel (another potential source of error). The ratio of the gear to the wheel is seen in a DISTANCE_PER_TICK macro: /
-`(2 * Pi * Wheel Radius) / (# of ticks per Gear revolutions * # of Gear turns per Wheel revolution)` /
+The are many sources of error with this as wheel encoders can produce false reports when there is wheel slippage. The implementation senses the position of the wheel at the base of the motor on the gearbox instead of the actual wheel. This means that there are several revoluations of the gear per one revolution of the wheel (another potential source of error). The ratio of the gear to the wheel is seen in a DISTANCE_PER_TICK macro: \
+`(2 * Pi * Wheel Radius) / (# of ticks per Gear revolutions * # of Gear turns per Wheel revolution)` \
+
 The rate at which the wheel encoders are sampled are also a point of interest.
