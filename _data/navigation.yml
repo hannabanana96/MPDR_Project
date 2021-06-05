@@ -7,7 +7,7 @@ main:
   - title: "ROS Setup"
     url: /ros_setup/
   - title: "lidar"
-    url: /lidar/
+    url: /Lidar/
   - title: "Wheel Encoders"
     url: /wheelEncoder/
   - title: "Current Testing"
