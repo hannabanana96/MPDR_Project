@@ -32,7 +32,7 @@ In the ublox ROS package, set the serial port to ttyS0. Easiest way to do this i
 
 Update `launch/ublox_device.launch` to point to the corresponding parameter file. I found that the `zed_f9p` parameter file worked for our purposes. 
 
-![GPS Launch Parameters](https://github.com/hannabanana96/MPDR_Project/blob/master/assets/images/gps_param.JPG){: .align-center}
+![GPS Launch Parameters](https://hannabanana96.github.io/MPDR_Project/assets/images/gps_param.JPG){: .align-center}
 
 To launch the GPS sensors:
 `roslaunch ublox_gps ublox_device.launch`
