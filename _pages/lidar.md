@@ -1,5 +1,6 @@
 ---
 permalink: /lidar/
+title: Lidar
 ---
 
 The lidar is used for localization, mapping, and nearby obstacle detection (obstacles that the robot needs to navigate around).
