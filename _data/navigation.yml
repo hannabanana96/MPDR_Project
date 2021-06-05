@@ -13,7 +13,7 @@ main:
   - title: "GPS"
     url: /gps/
   - title: "Lidar"
-    url: /Lidar/
+    url: /lidar/
   - title: "Wheel Encoders"
     url: /wheelEncoder/
   - title: "Current Testing"
