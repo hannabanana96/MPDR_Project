@@ -1,5 +1,6 @@
 ---
 permalink: /motor_controller/
+title: Moter and Moter Controller
 ---
 
 # Overview
