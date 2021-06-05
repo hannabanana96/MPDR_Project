@@ -35,7 +35,7 @@ delta_y = (robot.vx * sin(robot.th) + robot.vy * cos(robot.th)) * dt
 delta_th = robot.vth * dt
 
 ```
-![Wheel Encoder](https://github.com/hannabanana96/MPDR_Project/blob/master/assets/images/wheel_encoder_motor.jpg){: .align-center}
+![Wheel Encoder](https://hannabanana96.github.io/MPDR_Project/assets/images/wheel_encoder_motor.jpg){: .align-center}
 
 # Hardware Setup
 The current implementation uses an [AS5047P](https://ams.com/as5047p) 14-bit an axis magnetic rotary position sensor. The [development board](https://www.digikey.com/en/products/detail/ams/AS5047P-TS-EK-AB/5452344) was used for quick prototype (it includes a magnet and can be powered from 3V3 or 5V. An Arduino can be used to test the functionality of the sensors before integration with the robot:
@@ -53,8 +53,10 @@ This automatically addes two chip select lines (by default you can run two devic
 # Run with ROS
 Assuming the Pi has ROS and the [project code](https://github.com/hannabanana96/MPDR_Masters) installed already, the wheel encoder code can be launched by the following:
 * Start a ROS core: `roscore`
-* In another window: `rosrun mpdr encoder.py`
+* In another window: `rosrun mpdr encoder.py` \
 *This runs just the wheel encoders code, nothing else
 
 # Sources of Error
-The are many sources of error with this as wheel encoders can produce false reports when there is wheel slippage. The implementation senses the position of the wheel at the base of the motor on the gearbox instead of the actual wheel. This means that there are several revoluations of the gear per one revolution of the wheel (another potential source of error). The ratio of the gear to the wheel is seen in a DISTANCE_PER_TICK macro: (2 * Pi * Wheel Radius) / (# of ticks per Gear revolutions * # of Gear turns per Wheel revolution). The rate at which the wheel encoders are sampled are also a point of interest.
+The are many sources of error with this as wheel encoders can produce false reports when there is wheel slippage. The implementation senses the position of the wheel at the base of the motor on the gearbox instead of the actual wheel. This means that there are several revoluations of the gear per one revolution of the wheel (another potential source of error). The ratio of the gear to the wheel is seen in a DISTANCE_PER_TICK macro: /
+`(2 * Pi * Wheel Radius) / (# of ticks per Gear revolutions * # of Gear turns per Wheel revolution)` /
+The rate at which the wheel encoders are sampled are also a point of interest.
