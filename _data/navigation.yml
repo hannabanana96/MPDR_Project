@@ -6,16 +6,6 @@ main:
     url: /raspPi_setup/
   - title: "ROS Setup"
     url: /ros_setup/
-  - title: "Motor Controller"
-    url: /motor_controller/
-  - title: "IMU"
-    url: /imu/
-  - title: "GPS"
-    url: /gps/
-  - title: "Lidar"
-    url: /lidar/
-  - title: "Wheel Encoders"
-    url: /wheelEncoder/
   - title: "Current Testing"
     url: /current_testing/
   - title: "Solidworks"
