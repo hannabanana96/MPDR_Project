@@ -40,6 +40,7 @@ syntax on           " Turns on syntax highlighting
 
 * [Setup SSH capabilities](https://www.raspberrypi.org/documentation/remote-access/ssh/) - I recommend the systemctl method (Ubuntu Mate 20.04 doesn't have raspi-config). Setting up ssh will allow you to access the Rasp Pi's file system and command line from another machine.
 * `sudo apt install x11-apps`: This gets you `xeyes`. Typing `xeyes` into the command line allows a pair of eyes to pop on the graphical interface so you can check whether the Pi is displaying the correct screen/interface. (Good for checking if you set up your SSH X11 forwarding correctly).
+* `sudo apt install tmux`: Tmux allows you to have multiple shells open in the window terminal window - very helpful when developing in ROS. ROS requires a lot of different scripts running simultaneously.
 
 # Install [ROS Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu) on the Raspberry Pi 4
 Follow the instructions in the link. When selecting which installation to chose, I suggest the Desktop Install: `sudo apt install ros-noetic-desktop`
