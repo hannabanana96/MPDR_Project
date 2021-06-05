@@ -8,8 +8,11 @@ This project reuses two motorized wheelchair brushed motors. The motors came wit
 ![Wheel with E-brake](https://hannabanana96.github.io/MPDR_Project/assets/images/wheel_with_ebrake_smaller.jpg){: .align-center}
 
 # Hardware Setup
-The motor controller has two channels that are connected to the motors. The two channels are labeled MLA/MLB for the left motor, and MRA/MRB for the right motor. 
+The motor controller has two channels that are connected to the motors. The two channels are labeled MLA/MLB for the left motor, and MRA/MRB for the right motor. In the picture below, the yellow and gray wires are for the left motor, blue and purple wires are for the right motor.
 
 ![Motor Wiring](https://hannabanana96.github.io/MPDR_Project/assets/images/motor_pinout.jpg){: .align-center}
+
+Because UART0 is being used by the GPS sensors, another UART bus needs to be enabled. 
+* In `/boot/firmware/usercfg.txt`, add `dtoverlay=uart1
 
 # Software Setup
