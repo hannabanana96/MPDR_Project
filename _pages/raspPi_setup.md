@@ -48,23 +48,19 @@ This includes rviz (a data visualization tool) which will come in handy for test
 
 Proceed to [ROS Tutorials](http://wiki.ros.org/ROS/Tutorials) to setup a catkin_ws - the location of where all the ROS packages and source code. Complete the first tutorial: [Installing and Configuring Your ROS Environment](http://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment). I also recommend spending time with the Beginning Level tutorials located on the [ROS Tutorials](http://wiki.ros.org/ROS/Tutorials) page to become accustom to ROS. It is a steep learning curve, but will eventually make life easier.
 
-# Rasp Pi -> Motor Controller (UART)
-The Rasp Pi 4 has six UART (RX/TX) busses to choose from ([raspberrypi.org info](https://www.raspberrypi.org/documentation/configuration/uart.md)). For our purposes, I chose UART2 which is not natively activited. We can activate UART2 by doing the following:
-* `sudo vi /boot/firmware/usercfg.txt` \
-* And add: `dtoverlay=UART2,<specify baudrate>` \
-* Then reboot. \
-*The baudrate is going to dependent on what you specify in your code and on the motor controller hardware via the dipswitches ([see motor controller datasheet](https://github.com/hannabanana96/MRPD_Masters/blob/main/smartdriveduo-smart-dual-channel-30a-motor-driver-datasheet.pdf))
+Some key ROS commands that will be helpful for setting up and debugging the senors nodes
+* `rostopic list`: lists all the ROS topics that have been initiated by the nodes
+* `rostopic echo <topic_name>`: prints the topic's messages
+* `rostopic echo -c <topic_name>`: clears the message before echo'ing the next message
+* `rosnode list`: lists all the ROS nodes that have been initiated
 
-To make sure the new UART port is open: `python3 -m serial.tools.list_ports`, you should see `tty/AMA1`
 
-# Rasp Pi -> Wheel Encoders (SPI)
-Serial Peripheral Interface (SPI) is not natively actived on the Rasp Pi 4, which has up to 6 SPI busses. For our purposes, I chose SPI0. To activate SPI do the following:
-`sudo vi /boot/firmware/usercfg.txt` \
-And add: `dtparam=spi=on` \
-Close the file and in the command line: `pip3 install spidev` \
-Then reboot. \
-This automatically addes two chip select lines (by default you can run two devices on this SPI line). Next, check that your user has permissions to access the the SPI buss: `ls -l /dev/spi*`
-![image-center](https://hannabanana96.github.io/MPDR_Project/assets/images/spi_cmdline.JPG){: .align-center}
+# Sensor and Motor Setups
+* [Lidar](https://hannabanana96.github.io/MPDR_Project/Lidar/)
+* [GPS](https://hannabanana96.github.io/MPDR_Project/gps/)
+* [IMU](https://hannabanana96.github.io/MPDR_Project/imu/)
+* [Motor Controller](https://hannabanana96.github.io/MPDR_Project/motor_controller/)
+* [Wheel Encoder](https://hannabanana96.github.io/MPDR_Project/wheelEncoder/)
 
 
 # Permission denied for GPIO/I2C/SPI access?
