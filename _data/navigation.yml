@@ -6,7 +6,7 @@ main:
     url: /raspPi_setup/
   - title: "ROS Setup"
     url: /ros_setup/
-  - title: "Motor Controller
+  - title: "Motor Controller"
     url: /motor_controller/
   - title: "IMU"
     url: /imu/
