@@ -1,5 +1,6 @@
 ---
 permalink: /imu/
+title: IMU Sensor
 ---
 
 # Overview
