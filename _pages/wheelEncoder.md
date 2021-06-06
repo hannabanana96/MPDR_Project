@@ -59,6 +59,7 @@ Assuming the Pi has ROS and the [project code](https://github.com/hannabanana96/
 # Checking Odometry Messages/Broadcast
 It is very important to make sure the odometry messages are being created correctly. [Odometry](http://docs.ros.org/en/noetic/api/nav_msgs/html/msg/Odometry.html) messages are made Pose and Twist messages. Read through [REP 103](https://www.ros.org/reps/rep-0103.html) to gain an understanding of which direction relation to positive and negative in changes in position and orientation. The pose.z should always be 0 because the robot cannot move in the z direction (that would be up towards the sky or down into the ground). For example when the robot moves forward, there should be +x position (pose) and +x velocity (Twist), y position and velocity would be the same. When the robot rotates about the Z axis, there should be a positive rotation in the Pose.rotation_about_the_z_axis part of the Odometry message.
 
+
 # Sources of Error
 The are many sources of error with this as wheel encoders can produce false reports when there is wheel slippage. The implementation senses the position of the wheel at the base of the motor on the gearbox instead of the actual wheel. This means that there are several revoluations of the gear per one revolution of the wheel (another potential source of error). The ratio of the gear to the wheel is seen in a DISTANCE_PER_TICK macro: \
 `(2 * Pi * Wheel Radius) / (# of ticks per Gear revolutions * # of Gear turns per Wheel revolution)` \
