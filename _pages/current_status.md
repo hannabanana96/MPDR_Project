@@ -78,10 +78,21 @@ The ROS navigation stack tutorial requies a map for move_base.launch (launches t
 
 In move_base.launch (launches the navigation stack), it uses AMCL as the localization alogrithm. The robot is a differential drive robot, so makes ure to change the AMCL launch from amcl_omni.launch to amcl_diff.launch.
 
+## Run Navigation Stack
 Now you should be able to run the navigation stack:
 * `roslaunch mpdr robot_configuration.launch`
 * `roslaunch mpdr move_base.launch`
 
+With the two launch files running, you can pull up rviz (`rviz rviz`) and give the robot a navigation goal. Some topics that would be useful to add in your rviz window (Add, then Add by topic):
+* /<odometry topic> (whatever you odometry topic is called)
+* /amcl_pose -- shows where the robot thinks it is 
+* /scan -- the lidar
+* the local or global costmap
+  
+Before you give the robot a simple goal in rviz, you will need to give it an initial pose estimate (the initial pose and simple goal buttons in rviz next to each other near the top right of the rviz window). 
+
+## Obstacle Avoidance
+  
 
 # Path Following Improvements/Suggestions/Notes
 * The robot needs to be able to operate outdoors, so this might include loading in an "empty" map. We tried actively running slam_gmapping to create a real-time map while running robot_configuration.launch (launches sensors) and move_base.launch (launches navigation stack), but it was too computationaly expensive for the raspberry pi.
