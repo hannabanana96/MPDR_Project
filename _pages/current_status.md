@@ -12,7 +12,7 @@ Previous Chassis:
 Current Chassis: 
 ![New Robot](https://hannabanana96.github.io/MPDR_Project/assets/images/new_robot.jpg){: .align-center}
 
-## Future Chassis Improvements
+## Future Chassis Improvements/Suggestions
 * Currently there are only bumpers on the front of the robot. It would be beneficial to add bumpers on the back as well 
 * The electronics will requires a more secure enclosure when development begins to come to a close
 * There would need to be a sturdy platform so that packages can be placed on the robot
@@ -50,7 +50,19 @@ To run:
 
 <iframe src="https://drive.google.com/file/d/160EMM-p5eYeebYeJ8ykyQeFmLtIdVe65/view" frameborder="0" allowfullscreen></iframe>
 
+## Future Manual Controls Improvements/Suggestions
+I recommend removing the joystick from the Web App, and strictly using the ROS teleop package. Using the web page to control the robot is limiting such that it can only be used where there is network connectivity. The ROS teleop package fulfilled our goal of being able to manually control the movement of the robot for testing purposes.
+
 # Path Following
+The path following implementation uses the [ROS navigation stack](http://wiki.ros.org/navigation) and is based off of tutorials provided in the ROS Wiki. 
+
+1. Following the [Configuring and Using the Navigation Stack tutorials](http://wiki.ros.org/navigation/Tutorials/), the first step is setting up the transform between the lidar and the base_link of the robot. If you are unfamiliar with transforms, the "Setting up the Lidar Transform" gives some explanation. 
+
+[Setting up the Lidar Transform](http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF). 
+
+Our implementation of the lidar transform is found in our mpdr package, `lidar_tf.py`. Our implementation of the lidar also includes a scan_filter that filters out the area on the back of the robot where the touchscreen sits (so that the lidar doesn't see an "object" in the robot body. This is found in the mpdr package, `scan_filter.py`. 
+
+2. 
 
 # Obstacle Avoidance
 
