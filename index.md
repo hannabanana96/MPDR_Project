@@ -4,7 +4,7 @@ permalink: /
 hidden: true
 header:
   overlay_color: "#5e616c"
-  overlay_image: /assets/images/robo_2.jpg
+  overlay_image: /assets/images/title_slide.png
   actions:
     - label: "<i class='fas fa-download'></i> Link to Github Code"
       url: "https://github.com/hannabanana96/MRPD_Masters/"
