@@ -4,8 +4,6 @@ main:
     url: /about/
   - title: "RaspPi Setup"
     url: /raspPi_setup/
-  - title: "ROS Setup"
-    url: /ros_setup/
   - title: "Current Testing"
     url: /current_testing/
   - title: "Solidworks"
