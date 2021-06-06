@@ -6,9 +6,9 @@ main:
     url: /raspPi_setup/
   - title: "Current Testing"
     url: /current_testing/
-  - title: "Solidworks"
-    url: /solidworks/
-  # - title: "About"
+  - title: "Current Status"
+    url: /current_status/
+  # - title: "Current"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
   #   url: /year-archive/
