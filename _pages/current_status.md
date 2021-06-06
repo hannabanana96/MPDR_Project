@@ -29,7 +29,7 @@ To run:
 *Teleop can be intalled by: `sudo apt-get install ros-noetic-teleop-twist-keyboard`
 
 ## Webpage Joystick
-On the Admin page of the Delivery System's Web App, there is joystick that can be used to manually control the motors via the `/cmd_vel` topic. 
+On the Admin page of the Delivery System's Web App, there is joystick that can be used to manually control the motors via the `/cmd_vel` topic. To publish ROS topics from a webpage, the [rosbridge_suite](http://wiki.ros.org/rosbridge_suite) ROS package needs to be installed. 
 
 To run:
 * Launch a ROS websocket: `roslaunch rosbridger_server rosbridge_websocket.launch`
@@ -50,7 +50,7 @@ To run:
 
 
 
-<iframe src="https://drive.google.com/file/d/{{ video_id }}/preview" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://drive.google.com/drive/u/1/folders/1a7dFvbpGC2dYWz_Jgz306uPd1A5gN9yB" frameborder="0" allowfullscreen></iframe>
 
 # Path Following
 
