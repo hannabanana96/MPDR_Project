@@ -77,7 +77,7 @@ Now you should be able to run the navigation stack:
 * `roslaunch mpdr move_base.launch`
 
 With the two launch files running, you can pull up rviz (`rviz rviz`) and give the robot a navigation goal. Some topics that would be useful to add in your rviz window (Add, then Add by topic):
-* /<odometry topic> (whatever you odometry topic is called)
+* /odometry (whatever you odometry topic is called)
 * /amcl_pose -- shows where the robot thinks it is 
 * /scan -- the lidar
 * the local or global costmap
@@ -95,6 +95,15 @@ With the navigation stack running, the robot will automatically attempt to avoid
 
 
 # GPS Live Tracking
+The live GPS tracking requires the GPS sensor to be publishing to a topic in ROS ([See GPS setup tutorial](https://hannabanana96.github.io/MPDR_Project/gps/)). T
+
+To run the web page
+* Navigate to the directory of the Web App (wherever the index.html or index.php) is located.
+* If the index.* file is a .php extension, then start a php server: `php -S localhost:8000`
+* If the index.* file is an html extension, then start a http server: `python3 -m http.server`
+* Go to a web browser on the same machine (things that are set to localhost are only viewable on the same machine), and go to`localhost:8000`. This should take you to the main Web page
+
+To launch the gps sensors
 
 # Path Creation
 
