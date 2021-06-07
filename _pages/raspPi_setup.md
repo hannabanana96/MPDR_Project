@@ -67,7 +67,7 @@ Launch a ROS score on the master (`roscore`) and make sure the other_pi can see 
 
 
 # Sensor and Motor Setups
-* [Lidar](https://hannabanana96.github.io/MPDR_Project/Lidar/)
+* [Lidar](https://hannabanana96.github.io/MPDR_Project/lidar/)
 * [GPS](https://hannabanana96.github.io/MPDR_Project/gps/)
 * [IMU](https://hannabanana96.github.io/MPDR_Project/imu/)
 * [Motor Controller](https://hannabanana96.github.io/MPDR_Project/motor_controller/)
