@@ -48,17 +48,13 @@ To run:
   <source src="https://hannabanana96.github.io/MPDR_Project/assets/video/guiToRobot_liveDemo.mp4" type="video/mp4">
 </video>
 
-<iframe src="https://drive.google.com/file/d/160EMM-p5eYeebYeJ8ykyQeFmLtIdVe65/view" frameborder="0" allowfullscreen></iframe>
-
 ## Future Manual Controls Improvements/Suggestions
 I recommend removing the joystick from the Web App, and strictly using the ROS teleop package. Using the web page to control the robot is limiting such that it can only be used where there is network connectivity. The ROS teleop package fulfilled our goal of being able to manually control the movement of the robot for testing purposes.
 
 # Path Following and Obstacle Avoidance
 The path following implementation uses the [ROS navigation stack](http://wiki.ros.org/navigation) and is based off of tutorials provided in the ROS Wiki. There are two sensors needed for this [Lidar](https://hannabanana96.github.io/MPDR_Project/lidar/), and [WheelEncoder](https://hannabanana96.github.io/MPDR_Project/wheelEncoder/). Following the instructions on their respective pages for hardware/software bring up.
 
-1. Following the [Configuring and Using the Navigation Stack tutorials](http://wiki.ros.org/navigation/Tutorials/), the first step is setting up the transform between the lidar and the base_link of the robot. If you are unfamiliar with transforms, the "Setting up the Lidar Transform" gives some explanation. 
-
-[Setting up the Lidar Transform Tutorial](http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF). 
+1. Following the [Configuring and Using the Navigation Stack tutorials](http://wiki.ros.org/navigation/Tutorials/), the first step is setting up the transform between the lidar and the base_link of the robot. If you are unfamiliar with transforms, the "Setting up the Lidar Transform" gives some explanation. \ [Setting up the Lidar Transform Tutorial](http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF). 
 
 Our implementation of the lidar transform is found in our mpdr package, `lidar_tf.py`. Our implementation of the lidar also includes a scan_filter that filters out the area on the back of the robot where the touchscreen sits (so that the lidar doesn't see an "object" in the robot body. This is found in the mpdr package, `scan_filter.py`. 
 
