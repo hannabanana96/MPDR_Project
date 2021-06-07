@@ -56,11 +56,9 @@ The path following implementation uses the [ROS navigation stack](http://wiki.ro
 
 1. Following the [Configuring and Using the Navigation Stack tutorials](http://wiki.ros.org/navigation/Tutorials/), the first step is setting up the transform between the lidar and the base_link of the robot. If you are unfamiliar with transforms, the "Setting up the Lidar Transform" gives some explanation.
 * [Setting up the Lidar Transform Tutorial](http://wiki.ros.org/navigation/Tutorials/RobotSetup/TF). 
-
 * Our implementation of the lidar transform is found in our mpdr package, `lidar_tf.py`. Our implementation of the lidar also includes a scan_filter that filters out the area on the back of the robot where the touchscreen sits (so that the lidar doesn't see an "object" in the robot body. This is found in the mpdr package, `scan_filter.py`. 
 
 2. The next tutorial is to ensure the wheel encoders are producing Odometry information via the [Publishing Odometry Information over ROS tutorial](http://wiki.ros.org/navigation/Tutorials/RobotSetup/Odom). Odometry is the use of data from motion sensors to estimate the change in position over time. In the mpdr package, the [`encoders.py`](https://github.com/hannabanana96/MPDR_Masters/blob/master/mpdr/src/encoders.py) script handles the creation of the odometry broadcast and creation of an odometry message topic.
-
 * Tuning/checking the odometry is very important! I recommend following the [Basic Navigation Tuning Guide](http://wiki.ros.org/navigation/Tutorials/Navigation%20Tuning%20Guide) to help tun the odometry. I also found this article ["Deploying on Mars: Rock Solid Odometry for Wheel Robots"](https://www.freedomrobotics.ai/blog/tuning-odometry-for-wheeled-robots) very useful as well.
 
 3. The next step is to follow the [Setup and Configuration of the Navigation Stack on a Robot](https://www.freedomrobotics.ai/blog/tuning-odometry-for-wheeled-robots) tutorial. This tutorial creates several files, these are current implementation's versions:
@@ -70,9 +68,7 @@ The path following implementation uses the [ROS navigation stack](http://wiki.ro
 * [`local_costmap_params.yaml`](http://wiki.ros.org/navigation/Tutorials/RobotSetup)
 * [`base_local_planner_params.yaml`](https://github.com/hannabanana96/MPDR_Masters/blob/master/mpdr/config/base_local_planner_params.yaml)
 * [`move_base.launch`](https://github.com/hannabanana96/MPDR_Masters/blob/master/mpdr/launch/robot_configuration.launch)
-
 * The ROS navigation stack tutorial requies a map for move_base.launch (launches the ROS navigation stack). An empty map and be utilized by adding an all white pgm file. Alternatively, a map can be created of your surrouding area with the lidar and the [slam_gmapping](http://wiki.ros.org/navigation/Tutorials/RobotSetup) ROS package. Follow the previous slam_gmapping tutorial to create a map for the navigation stack. 
-
 * In move_base.launch (launches the navigation stack), it uses AMCL as the localization alogrithm. The robot is a differential drive robot, so makes ure to change the AMCL launch from amcl_omni.launch to amcl_diff.launch.
 
 ## Run Navigation Stack
